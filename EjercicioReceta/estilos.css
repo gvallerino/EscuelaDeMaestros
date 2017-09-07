@@ -1,0 +1,20 @@
+*{
+    background-color: #DBDBDB;
+    font-style: italic
+}
+
+h1{
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 50px;
+}
+
+.imagePrincipal {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid;
+    width: 50%;
+    height: 50%;
+}
+
