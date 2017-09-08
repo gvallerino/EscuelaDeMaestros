@@ -1,6 +1,6 @@
 *{
-    background-color: #DBDBDB;
-    font-style: italic
+    background-color: antiquewhite;
+    font-style: italic;
 }
 
 h1{
@@ -18,3 +18,60 @@ h1{
     height: 50%;
 }
 
+#ingredientes {
+    display: none;
+}
+
+#descripcionReceta {
+    display: none;
+}
+
+.par {
+    font-size: 50px;
+}
+
+.impar {
+    font-size: 30px;
+    text-align: center;
+}
+
+.li1 {
+    color: blue;
+}
+.li2 {
+    color: lightblue;
+}
+.li3 {
+    color: yellow;
+}
+.li4 {
+    color: orange;
+}
+.li5 {
+    color: red;
+}
+.li6 {
+    color: darkred;
+}
+.li7 {
+    color: violet;
+}
+
+
+.p1 {
+    background-color: dodgerblue;
+    font-style: cursive;
+    color: white;
+}
+
+.p2 {
+    background-color: brown;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.p3 {
+    background-color: aliceblue;
+    font-style: normal;
+    font-weight: 100;
+}
