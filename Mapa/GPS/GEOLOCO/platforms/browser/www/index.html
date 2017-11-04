@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de Geolocalización</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Cargamos las liberias API para que el dispositivo estè preparado
+    //Ponemos el metodo listener del doument "a escuchar"
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Declaramos que cuando el dispositivo este preparado tome la posición del GPS
+    // Le doy dos "opciones" que funcione, OnSuccess. Que no funcione onError
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // Creo la función onSuccess
+    //le paso todas la propiedades que necesito del objeto position
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          + position.timestamp                    + '<br />';
+    }
+
+    // Creo la función onError
+    //Le paso el mensaje de error deseado
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    </script>
+  </head>
+  <body>
+    //declaro el P y su ID que luego completo con las funciones
+    //Funciona sin script en el body, ya que declaramos los odDeviceReady
+    <p id="geolocation">buscando geolocalización...</p>
+  </body>
+</html>

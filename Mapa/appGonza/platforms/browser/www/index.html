@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de Geolocalización</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    </script>
+  </head>
+  <body>
+      Longitud: <input type="text" name="longitud" id="longitud" value="">
+      Latitud: <input type="text" name="latitud" id="latitud" value="">
+      <button onclick="cargarPosiciones()">Ubicacion actual </button>
+      
+      <div class="container">
+          <button onclick="verMapa();">Ver en el Mapa</button>
+      </div>
+      <div id="googleMap" style="width:100%;height:380px;">
+
+      </div>
+      
+      <script src="http://maps.googleapis.com/maps/api/js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>
